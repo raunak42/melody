@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Amiko, Kanit } from "next/font/google";
+import { Kanit } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/Sidebar/Sidebar";
 import { Mybar } from "@/components/Mybar/Mybar";
+import { ControlPanel } from "@/components/ControlPanel/ControlPanel";
+import { RecoilProvider } from "@/providers/RecoilProvider";
 
 const kanit = Kanit({ subsets: ["latin"], weight: "400", display: "swap" });
 
@@ -19,9 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={kanit.className}>
-        <Sidebar />
-        <Mybar />
-        <div className="ml-[270px] mr-[300px] p-[24px]">{children}</div>
+        <RecoilProvider>
+          <Sidebar />
+          <Mybar />
+          {children}
+          <ControlPanel />
+        </RecoilProvider>
       </body>
     </html>
   );
