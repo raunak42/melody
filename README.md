@@ -6,6 +6,7 @@
 - NextJS
 - Tailwind CSS
 - Recoil
+- Spotify API
 
 ## Getting Started
 
