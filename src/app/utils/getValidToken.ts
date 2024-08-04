@@ -1,4 +1,4 @@
-import { tokenAttributes } from "../page";
+import { TokenAttributes } from "../page";
 
 export const getValidToken = async () => {
     const response = await fetch(`https://accounts.spotify.com/api/token`, {
@@ -13,7 +13,6 @@ export const getValidToken = async () => {
         }),
     });
 
-    const data: tokenAttributes = await response.json();
-
+    const data: TokenAttributes = await response.json();
     return data;
 }
