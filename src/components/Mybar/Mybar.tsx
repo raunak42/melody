@@ -4,10 +4,16 @@ import { History } from "./History";
 export const Mybar: React.FC = () => {
   return (
     <div className="hidden  h-full fixed right-0 bg-[#000000] w-[300px] px-[12px] py-[24px] xl:flex flex-col items-center gap-[16px]">
-      <div className="flex flex-row  w-full h-[60px]" >
+      <div className="flex flex-row  w-full h-[60px]">
         <div className="w-[60%] flex flex-row items-center  gap-[8px]">
-          <Image className="rounded-full" alt="img" width={50} height={50} src={"/rick2.jpg"} />
-          <h1 className="text-white" >Rick Sanchez</h1>
+          <Image
+            className="rounded-full"
+            alt="img"
+            width={50}
+            height={50}
+            src={"/rick2.jpg"}
+          />
+          <h1 className="text-white">Rick Sanchez</h1>
         </div>
         <div className="w-[40%] flex flex-row items-center justify-end  gap-[18px] pr-[6px]">
           <Image alt="bell" width={20} height={20} src={"/bell.svg"} />

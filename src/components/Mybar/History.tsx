@@ -47,8 +47,8 @@ export const History: React.FC = () => {
                 className="rounded-[4px]"
               />
               <div className="flex flex-col items-start justify-center">
-                <h1 className="text-sm text-zinc-200">{item.name}</h1>
-                <h1 className="text-xs text-zinc-400">
+                <h1 className="text-sm text-zinc-200 line-clamp-1">{item.name}</h1>
+                <h1 className="text-xs text-zinc-400 line-clamp-1">
                   {item.artists[0].name}
                 </h1>
               </div>
